@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": ["success", "orders", "total", "totalToday"],
+  "properties": {
+    "success": { "type": "boolean" },
+    "orders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ingredients", "status", "number", "createdAt", "updatedAt"],
+        "properties": {
+          "ingredients": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "_id": { "type": "string" },
+          "status": { "type": "string" },
+          "number": { "type": "integer" },
+          "createdAt": { "type": "string", "format": "date-time" },
+          "updatedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "total": { "type": "integer" },
+    "totalToday": { "type": "integer" }
+  }
+}
